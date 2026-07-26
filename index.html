@@ -94,6 +94,14 @@
 		/* Paneles decorativos con degradado de marca (sin fotos de relleno) */
 		.banner.style1 .image{ background:linear-gradient(150deg,var(--teal-2),var(--teal)) !important; }
 		.banner.style1 .image img{ object-position: center 22% !important; }
+		/* Hero: foto más contenida */
+		@media (orientation: landscape){
+			.banner.style1{ align-items:center !important; }
+			.banner.style1 .image{ width:40% !important; height:26rem !important; }
+		}
+		@media (orientation: portrait){
+			.banner.style1 .image{ height:34vh !important; }
+		}
 		.spotlight.style1 .image{ background:linear-gradient(150deg,var(--tint),var(--teal-2)) !important; }
 		.spotlight.style1 .image img{ object-position: center 30% !important; }
 
