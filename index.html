@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <!--
 	Basado en la plantilla "Story" de HTML5 UP (html5up.net | CCA 3.0).
-	Contenido, voz y marca: Mabel Laguna. NO se modifica assets/css/main.css.
-	Landing de ventas — Curso Intensivo de Mindfulness, 8 semanas, 59ª edición.
+	Contenido, voz y marca: Mabel Laguna. La capa de marca (colores #479394 /
+	#6AC1BC, tipografía y logo) va en el <style> de abajo; NO se modifica
+	assets/css/main.css. Landing de ventas — Curso Intensivo de Mindfulness,
+	8 semanas, 59ª edición.
 -->
 <html lang="es">
 	<head>
@@ -23,65 +25,108 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+		<!-- Tipografía: Mulish como fuente cargada (cercana a Cooper Hewitt);
+		     Cooper Hewitt se usa si está instalada en el dispositivo -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" />
 
-		<!-- ===== Capa de marca Mabel Laguna ===== -->
+		<!-- ===== Capa de marca Mabel Laguna (sobre la plantilla Story) ===== -->
 		<style>
 		:root{
 			--teal:#479394; --teal-2:#6AC1BC; --teal-dark:#2F6F70;
 			--tint:#EAF4F3; --line:#CDE4E2; --ink:#33383A;
 		}
+
+		/* Tipografía de marca */
 		body, input, select, textarea, button, .button,
-		h1,h2,h3,h4,h5,h6{ font-family:'Cooper Hewitt','Mulish','Segoe UI',system-ui,sans-serif; }
+		h1,h2,h3,h4,h5,h6{
+			font-family:'Cooper Hewitt','Mulish','Segoe UI',system-ui,sans-serif;
+		}
+
+		/* Fondos y texto */
 		body{ background-color:#ffffff; color:var(--ink); }
 		input, select, textarea{ color:var(--ink); }
 		label{ color:var(--teal); }
 		h1,h2,h3,h4,h5,h6{ color:var(--teal); font-weight:600; letter-spacing:normal; }
+
+		/* Enlaces y acentos */
 		a{ color:var(--teal); }
 		a:hover{ color:var(--teal-dark); }
 		strong, b{ color:var(--teal); }
-		input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus{
+
+		/* Foco de formularios */
+		input[type="text"]:focus, input[type="email"]:focus,
+		textarea:focus, select:focus{
 			border-color:var(--teal); box-shadow:0 0 0 2px var(--teal);
 		}
+
+		/* Botones secundarios */
 		input[type="submit"], input[type="reset"], input[type="button"], button, .button{
-			box-shadow: inset 0 0 0 1px rgba(71,147,148,0.5); color:var(--teal) !important;
+			box-shadow: inset 0 0 0 1px rgba(71,147,148,0.5);
+			color:var(--teal) !important;
 		}
-		input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, button:hover, .button:hover{
-			box-shadow: inset 0 0 0 1px var(--teal); background-color:rgba(106,193,188,0.12); color:var(--teal-dark) !important;
+		input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover,
+		button:hover, .button:hover{
+			box-shadow: inset 0 0 0 1px var(--teal);
+			background-color:rgba(106,193,188,0.12);
+			color:var(--teal-dark) !important;
 		}
-		input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary, button.primary, .button.primary{
-			background-color:var(--teal-dark) !important; color:#ffffff !important; box-shadow:none;
+
+		/* Botón primario (CTA) — teal accesible; hover teal claro con texto oscuro */
+		input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary,
+		button.primary, .button.primary{
+			background-color:var(--teal-dark) !important;
+			color:#ffffff !important; box-shadow:none;
 		}
-		input[type="submit"].primary:hover, input[type="reset"].primary:hover, input[type="button"].primary:hover, button.primary:hover, .button.primary:hover{
+		input[type="submit"].primary:hover, input[type="reset"].primary:hover,
+		input[type="button"].primary:hover, button.primary:hover, .button.primary:hover{
 			background-color:var(--teal-2) !important; color:#17403F !important;
 		}
+
+		/* Superficies y líneas */
 		.wrapper.style2{ background-color:var(--tint); }
 		.wrapper.style2 > .inner{ background-color:#ffffff; }
 		ul.alt li{ border-top-color:var(--line); }
 		.index > *{ border-top-color:var(--line); }
 		.box{ border-color:var(--line); }
+
+		/* Paneles decorativos con degradado de marca (sin fotos de relleno) */
 		.banner.style1 .image{ background:linear-gradient(150deg,var(--teal-2),var(--teal)) !important; }
 		.spotlight.style1 .image{ background:linear-gradient(150deg,var(--tint),var(--teal-2)) !important; }
+
+		/* Logo (incrustado en el propio archivo, sin imagen externa) */
 		.brand-logo{
 			display:inline-block; width:3.5rem; height:3.5rem; margin:0 0 1.5rem 0;
-			background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAOXElEQVR42u2d2W9c13nAf2e5d1YOlyGHFKnFoiU5siQvcQq0aPNSI0GbPrnpS5CHonDaIkDQFP0v+lDAzUtSFC3SAG0auHUfmqRAEvehL+liO5UlW5JJiSIlStyGm2a/y+nDnRkPRXJMN4Fikt8PIkBQM5d35vzm+77z3XMPlXPOIQi/YLS8BYKIJYhYgoglCCKWIGIJIpYgiFiCiCWIWIIgYgkiliBiCYKIJYhYgoglCCKWIGIJIpYgiFiCiCWIWIIgYgkiliBiCYKIJYhYn3Rc+0sQsX5xUjmHAlT7e0HE+rmJnUMpRSMKaUQhSilikesjsfIW9El9zqGVYnZrk2/ffA8H/MGnLnFucKgrnJK3ak+Uk9i+h1SOjjI/vjfPP92Z6UYpreCL0xf4/KkzH6ZJJXqJWAdIfVopgjjmO7fe5z8e3Cfneei2PLFzVIOAz05O8fvPXMLTuvscQcTqK9VWq8k3r1/lxsY6Bd8ndm7HjNAoxXarxaeGR/jq5ecZ8lMil4jVX6qlWpVvXPsZD6tV8p5HtM/bY5SiEgRMZHP8yXMvciKbE7lErL2luld5xGvvvsNWs0nG2n2l6pWrHoYUfJ8/ff4lTucHRC4Ra7dUf3H1bapBQMqYA7cUtFI0o4ic9fizF0Su7vtyrGd/bQGWazVee/edjy1VR8yUMVTDgNeuvs1SrYqWXtfxFcsBql2Ef+PaO2w2mx9bqsfl2m61+Mt3f8Z2q4VW6lhfAtLHVSrnHJFz/NV77/KgWiVrbV+ptFJ901vsHBlrWapV+dZ7VwnjGPfYbFLEOiYp8Huzt7i2vtZ39gegSIr0ehjSr9ceOUfe87i+XuZ7s7eSqHVMU+KxE6tTWP/PyhI/uneXgu/3lUq3rxO+OFrixdESzSjsG7ki5yj4Pj++P89/rywd23rrSIjlcMRu55frU1dtNpv8/cxN0sb2jSgaqIchU7k8X7vyAl+78gJT+Tz1MET3iVzOOdLG8g8f3GSj2UDtU2+5tug7z9uJWJ+YngmqWwN1vlRPhOqI1ln+8vrtD9hsNvC03ncYFRA4x0gqzdef+3R3PdbXn/s0xXSawMX7quUAqzWbrSav3/6gu9ymV6TO79h93kejTWEPX3RKBiS57PIuDkfaGLKex5CfYjSdYTybZSKbo5jO7EpbNzbK/HT5AXmvfwpUStEIA37r9FMU0+muDCOpNL8+McUbczMMeP6+ES9u11v/ufyQ35iY4uLwSLKmq30+Dig36izVaizXqqw16my2mtSCgEYUoYCvXnqewVSq+5pFrCdSgMNCZZtG+OEaqbgdf6zSZK1lNJNleqDAxZEiFwaHKfg+3793F8XBimrVFulxRtLpAw10EiEV3793l2dHijxqtbi1tcGNjXXmtrdYrdeohSGhi9vpQ3UL/pS13dcjEesJkjKmGzHsHiktdI77lUfMbW/x5uICpWyOIob3VpYZGC6gtMFF0b7LXpxzpIzlB/N3eHG0RMH3AdhutfjXu7dJ9anPOsdUxpBWiuvzC/x5vck6Mcu1CqDwtMZqTcbaXTKHccyA55EyVsR6cvVUQtoYMtay3mygHbuKXgX4xpAyBpzjURBwbeYDgq0KmYEchZEhCiNDGM8SR1ESAnsEc+3nr9Tr/OjePL/39HkAfnJ/npV6nQHfJ4rj3WFUKYy1RGHIxsoa2+VN6o+qrK6WeerCNHnrQbuYdz311g6x2j2xtDE7XrOI9QT6UEophlMpFirbKGXYK3h0CmalFFGzBfUmxrM0aw2Wqw/YXC0zXBqlUBxCG0MURT2rQhVBFFEPQ1Ybte4xV+p16mFI2hiM0nSUds5hjCGOHZsrZTZW1mg2mmilMZ6FRouo2UKnfVzcv7aLnGM4le6mxcO4kPBwitX+FJ/I5nlnbeWjm6HGUN2uEIYhxlrQYJUlaAUsLSyyVd5gbGqcbGEAF8cEUUSMYyyd5bMnpvj8qTPdePjF6fMMtJugq406GvCMQRtDbfsRq4vL1Ks1tNZYa7tiBGFIdbvCSGaU0IV9ZYlczIlsbsdrFbGeIGcGBj5yeq7aKapeqQIf9pM6A26tpVGrc3/mLsOlIkMTY4xmsnzp3DNcGBpOUmkPY5kMX75wkVYUcWtzg+/evkW5VmNzcYmNlXLSamgL1anBXLslUq9UcaXiAc5ZcWagIH2sJ15ntcdlujBIzvP6d7aVIooimo0mSisez5lJRNMordlcLjNzY5bfnJjkSnG0u+zY7dHUtFpzpTjKyxNTzN6cZXO5jNIabfTuot45lFY0602iKOobgmLnyFrLdGFwx2sVsZ5QQ9QBo5ksJ3N5Wu3aaN+aJQiJgj7pp+2BsgYThLwxc4u3Vle6PTC1x+RBK8Xbayv88wc30a0QZc2OY+15HmH/81BK0YoiTuYHGMtku5FOxHrSBTzwfHGsbxc8GdCI+PEZ3D7HNMZQjyK+9f5VfnJ/fte1vs61xjfvL/DN965SjyKMMQfqi8VxTBT2EQsI4pjni6OH/ubYQytWZ2w+Uxonb/dJh+0fuTiGAw6Scy5pUyjN371/nR/Mz3Xl6kj1w4U5vv3+NVJK41t68Dalc8SdGaHbOw3mPI9fKU0c6jR4uMVqd89LmSyXi6PJheGfcyRc7PBTPjbtE7QCvCDi9bkZftiWSyvFv83P8fqdGbwwImi1sCkf3/f6thAONBDt9fOXR0YpZbLdrr2I9UtqOwB87uQZjN5jBUF7XJTRH/nxV+0iPz9UwFhL0GpRXlolbz3+cfYWP11+yH8tP+S7s7fIW4/y0hqtZoC1hvzwYLcH9lFhVmvFXl1PR3Jzxuc6N8JyuDnU7YZOA/Hc4BAvjpZ4a2V51yzROYexBq31/jVLuw4bmxpnZGIMFzsebWzTqDeIwpC87/OdW++jgLzvEYYhzXqDysYWA8ODjIyP4pyj/GAFbc2+aVdrjbG7LwVppagGAS+NjXN+cKi7EFHaDZ8AXjl7bs816845rPWw3t7pqjNbKxSHKJ2aRCnF8sIim6vlroyqJ8B0UrBSis21dZYXFkEpSidPMFgc2rc4d85hPYvxdovVWTP/yvS5ozIch1+szsqGyVyeL5w5SyUIML3X/JxDW0Mqm8a5eOegt6XK5LKMn56kUavz4M4C2+VN/HSK7EAObXfO+JIIaMkO5PDTKbbLmzy8vUCjVqN0epJMLksYhjtSr1IKF8ekMmnMY8fr3Pj626fPMpXLdzcbOewcid1mOrO2L5w+y/X1MrNbm7tujsgN5Nkub+yov1wUkcnnmJw+jdKKOAwZGR9j/MxU8hCt9ix2nHNMPDXVneEFjRZxGKF8n6mnz/DgzgKNai2p7XqenyvkdxRXWilqYcgzQ8P8zpmzR0aqI5UKFcmqzVcvXibveQRxEp060SJbyOP5fref5WKH8TxOnD2VpKcoJpXLkM5lUDp5Xr8KOlnIoFBakc5lSOUyuDjGeIbJ6VM7Um8cx3i+T7aQx/WcVxjHZK3l1YtXsFrvSLki1icsJY5nsvzxs88RubhbHyUD6zEwMkjcHlgcGKOxnsXFyZI6F7tEvI8zJXPJ8V3suscw1qKNgbZ8cRwzMDLYFbvT/AzjmD+69BwT2eyRilZHSqzelHhppMhXLl6hEYW49s+jOGa4VMTzPeI4RhtNq9liaX4RSNZQ9YYj59yO2V0nyvR7jLEWpRRL84u0mk200YnUnsfQWJEojrs3stbDkFcvXubKyOiRvCX/yO3o15HrV8dPEDvH3964jtUaC2jfp3iixNL8Ilrr5E7o8gZBs0VxYox0LoO2BqV0Oym55J9zRGG4Q54kZyWPcc4RhxHVSpX1pVVqj6pJxALiKKZ08gReyocoInSOII75yrNX+LWJySO7z8OR3RSkM2BX11b56xvXqIchWWtxSvFw7h5b5c0kDUKyghTwfB8/5WOsSWoz59rX9yLCVpB8En2v2xfrPCYKI4Jmi1arlchtTLISNEjaGJNnT6GcoxaGpK3lDy9e5oXR0pHePORI7zbTGbj7lQp/c+Mat7e3GPB9cHBvZo56pbqjYdldQ+XaxVNnWqB67q7p8/+dx3R6Y5l8jlPnn+ruETFdGOTVi5c5dQx2pDny2xh1BrAVRbwxN8ub9+ZxSpFSisXbC1S2K0nk6rwNqtMG7dTmbncxrz58RHcpn/uwFgvDkHw+x9S5MzTbddjLJ0/zu9Pnu03co77N0bHYH6t33fjM1gb/cmeWm1sbKAdbi8s8Wt+EntT2/52VOucgihkoDjE4OY7T8MzgMK+cPceFoeFd5yJiHbHoBfD26jL/vniP2e0tVlfWqCyXIQwxxnS75p2bJPYTSfXMEKMoAmvJjxcZK43ydGGQlydP8VJpvPu7j9P23cduR7/H09DM5gZvlVf536WHzCzcp7y2ThSEWKWwxmA6jcueGssBURwTtmd5xrMUR0c4f/okL0yc4DPFMc63I9Rev1PEOuKC9UaQVhyzUKtwY3WFG4sPmFteZWVri2q9QSsMe/Z5V/jWkkunGRsqcHa8xLOTk1wcK3E6l8fX+lgLdezF6h38jjCPs91qsVWvU200aLb7WClryaVTDGay3bujD3o8EesY4nrSnPoYYsQ9z5E/gSJiHVg29thrK+lIiEQilvDEkT8rJ4hYgogliFiCIGIJIpYgYgmCiCWIWIKIJQgiliBiCSKWIIhYgogliFiCIGIJIpYgYgmCiCWIWIKIJQgiliBiCSKWIIhYgogliFiCIGIJIpYgYgmCiCWIWIKIJQgiliBiCSKWIIhYwi+P/wONoC6oHvqdJAAAAABJRU5ErkJggg==') center/contain no-repeat;
+			background:url('data:image/png;base64,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') center/contain no-repeat;
 		}
 		footer .brand-logo{ display:block; width:2.75rem; height:2.75rem; margin:0 auto 0.75rem auto; }
-		.nota-precio{ background:var(--tint); border:1px solid var(--line); border-radius:0.5rem; padding:1rem 1.25rem; font-style:italic; }
-		@media (prefers-reduced-motion: reduce){ *, *::before, *::after{ animation:none !important; transition:none !important; } }
+
+		/* Aviso de precio: destacado sereno, sin urgencia */
+		.nota-precio{
+			background:var(--tint); border:1px solid var(--line); border-radius:0.5rem;
+			padding:1rem 1.25rem; font-style:italic;
+		}
+
+		/* Respeta la preferencia de menos movimiento (accesibilidad) */
+		@media (prefers-reduced-motion: reduce){
+			*, *::before, *::after{ animation:none !important; transition:none !important; }
+		}
 		</style>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 
+			<!-- ============ HERO ============ -->
 			<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 				<div class="content">
 					<span class="brand-logo" role="img" aria-label="Mabel Laguna"></span>
 					<h1>Otra manera de relacionarte con el estrés, los pensamientos y la ansiedad</h1>
-					<p class="major">No siempre podemos elegir lo que sentimos. Pero sí podemos comprender lo que nos ocurre y aprender una manera diferente de relacionarnos con ello.</p>
-					<p>Curso Intensivo de Mindfulness de 8 semanas con <strong>Mabel Laguna</strong>, psicóloga sanitaria. <strong>59ª edición.</strong> Presencial en Málaga y online.</p>
+					<p class="major">No siempre podemos elegir lo que sentimos. Pero sí podemos
+					comprender lo que nos ocurre y aprender una manera diferente de
+					relacionarnos con ello.</p>
+					<p>Curso Intensivo de Mindfulness de 8 semanas con <strong>Mabel Laguna</strong>,
+					psicóloga sanitaria. <strong>59ª edición.</strong> Presencial en Málaga y online.</p>
 					<ul class="actions">
 						<li><a href="#reserva" class="button primary">Reservar mi plaza</a></li>
 						<li><a href="#first" class="button">Conocer el programa</a></li>
@@ -90,11 +135,19 @@
 				<div class="image"></div>
 			</section>
 
+			<!-- ============ RECONOCIMIENTO / PARA QUIÉN ES ============ -->
 			<section id="first" class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 				<div class="content">
 					<h2>Vivir con el piloto automático puesto</h2>
-					<p>Hay algo que veo muy a menudo en consulta: la mente que se adelanta, que anticipa, que da vueltas a lo mismo. El estrés y la ansiedad no aparecen porque hagamos algo mal; son formas que tiene el sistema nervioso de protegernos. Tienen sentido. El problema es que, con el tiempo, cuestan más de lo que dan.</p>
-					<p>Este curso no promete quitarte el estrés ni la ansiedad. Lo que entrenamos es otra cosa: comprender qué está pasando y aprender a relacionarte de otra manera con los pensamientos y las emociones, en lugar de reaccionar en automático.</p>
+					<p>Hay algo que veo muy a menudo en consulta: la mente que se adelanta, que
+					anticipa, que da vueltas a lo mismo. El estrés y la ansiedad no aparecen
+					porque hagamos algo mal; son formas que tiene el sistema nervioso de
+					protegernos. Tienen sentido. El problema es que, con el tiempo, cuestan más
+					de lo que dan.</p>
+					<p>Este curso no promete quitarte el estrés ni la ansiedad. Lo que
+					entrenamos es otra cosa: comprender qué está pasando y aprender a
+					relacionarte de otra manera con los pensamientos y las emociones, en lugar
+					de reaccionar en automático.</p>
 					<ul class="actions">
 						<li><a href="#temario" class="button">Ver cómo trabajamos</a></li>
 					</ul>
@@ -102,102 +155,185 @@
 				<div class="image"></div>
 			</section>
 
+			<!-- ============ QUIÉN TE ACOMPAÑA (autoridad + 59 ediciones) ============ -->
 			<section class="wrapper style1 align-center">
 				<div class="inner medium">
-					<header><h2>59 ediciones acompañando este proceso</h2></header>
-					<p>Este es un programa con recorrido: la <strong>59ª edición</strong> de un curso que se ha impartido, revisado y afinado durante años. No hace falta prometer nada; el propio camino ya habla.</p>
-					<p><strong>Mabel Laguna</strong> es psicóloga general sanitaria colegiada (Nº AO09300), con 26 años de experiencia clínica e instructora de mindfulness, en Málaga. Su trabajo se articula alrededor de una idea propia, <em>El Centro</em>: ese lugar desde el que puedes observar lo que te ocurre sin ser arrastrada por ello, y elegir cómo responder. El curso se apoya en enfoques con respaldo científico —MBCT y MBSR—, con un efecto moderado sobre el estrés, la ansiedad y la calidad de vida.</p>
+					<header>
+						<h2>59 ediciones acompañando este proceso</h2>
+					</header>
+					<p>Este es un programa con recorrido: la <strong>59ª edición</strong> de un
+					curso que se ha impartido, revisado y afinado durante años. No hace falta
+					prometer nada; el propio camino ya habla.</p>
+					<p><strong>Mabel Laguna</strong> es psicóloga general sanitaria colegiada
+					(Nº AO09300), con 26 años de experiencia clínica e instructora de
+					mindfulness, en Málaga. Su trabajo se articula alrededor de una idea propia,
+					<em>El Centro</em>: ese lugar desde el que puedes observar lo que te ocurre
+					sin ser arrastrada por ello, y elegir cómo responder. El curso se apoya en
+					enfoques con respaldo científico —MBCT y MBSR—, con un efecto moderado
+					sobre el estrés, la ansiedad y la calidad de vida.</p>
 				</div>
 			</section>
 
+			<!-- ============ TEMARIO: 8 SEMANAS (siempre visible, componente .index) ============ -->
 			<section id="temario" class="wrapper style2">
 				<div class="inner">
 					<header class="align-center">
-						<h2>El recorrido de las 8 semanas</h2>
-						<p>El programa sigue una progresión. Cada semana desarrollamos una capacidad que sirve de base para la siguiente: empezamos aprendiendo a darnos cuenta de lo que ocurre y, poco a poco, llevamos esa atención hacia nuestros pensamientos, nuestras emociones y nuestra forma de relacionarnos con nosotros mismos.</p>
+						<h2>Programa de la 59.ª edición · 8 semanas</h2>
 					</header>
 					<div class="index">
+
 						<article>
-							<header><h3>Semana 1</h3><p>Darse cuenta y volver</p></header>
-							<div class="content"><p>Empezamos reconociendo cuánto tiempo vivimos en piloto automático y aprendemos a dirigir intencionadamente la atención al momento presente. La primera clave del programa aparece aquí: <em>no se trata de hacerlo bien, sino de darse cuenta y volver.</em></p></div>
+							<header><h3>Semana 1</h3><p>Darse cuenta y salir del piloto automático</p></header>
+							<div class="content">
+								<p>Comenzamos observando cuánto tiempo vivimos de manera automática,
+								con el cuerpo en un lugar y la mente en otro. Aprendemos qué
+								significa practicar mindfulness y empezamos a entrenar la capacidad
+								de darnos cuenta y volver conscientemente al momento presente.</p>
+							</div>
 						</article>
+
 						<article>
-							<header><h3>Semana 2</h3><p>Volver al cuerpo y a la experiencia directa</p></header>
-							<div class="content"><p>Aprendemos a salir por momentos de la cabeza y llevar la atención al cuerpo. Empezamos a reconocer sensaciones y a observar cómo reaccionamos automáticamente ante aquello que nos resulta agradable, desagradable o neutro.</p></div>
+							<header><h3>Semana 2</h3><p>Del pensar al sentir</p></header>
+							<div class="content">
+								<p>Dirigimos la atención hacia la experiencia directa: los sentidos,
+								el cuerpo y las sensaciones. Empezamos a reconocer cómo vivimos las
+								experiencias agradables, desagradables y neutras y qué ocurre en
+								nosotros ante ellas.</p>
+							</div>
 						</article>
+
 						<article>
-							<header><h3>Semana 3</h3><p>Presencia en la vida diaria</p></header>
-							<div class="content"><p>Llevamos mindfulness fuera de la práctica formal. A través del movimiento consciente y de actividades cotidianas, entrenamos la capacidad de reconocer cuándo la mente se ha ido al pasado o al futuro y <em>volver a lo que está ocurriendo aquí y ahora.</em></p></div>
+							<header><h3>Semana 3</h3><p>Volvamos al presente</p></header>
+							<div class="content">
+								<p>Observamos la tendencia natural de la mente a viajar continuamente
+								hacia el pasado y el futuro. Entrenamos la capacidad de reconocer
+								cuándo la mente se ha ido y volver una y otra vez al presente,
+								llevando progresivamente la práctica a la vida cotidiana.</p>
+							</div>
 						</article>
+
 						<article>
-							<header><h3>Semana 4</h3><p>Relación con los pensamientos</p></header>
-							<div class="content"><p>Aprendemos a observar la actividad de la mente sin quedar tan atrapados en ella. Descubrimos que <em>un pensamiento no es necesariamente un hecho</em> y entrenamos la posibilidad de verlo, reconocerlo y dejarlo pasar sin tener que creerlo o reaccionar automáticamente.</p></div>
+							<header><h3>Semana 4</h3><p>Reconozcamos lo que rechazamos</p></header>
+							<div class="content">
+								<p>Exploramos qué hacemos cuando aparece algo que no nos gusta.
+								Aprendemos a reconocer nuestras respuestas automáticas de rechazo,
+								resistencia y evitación y cómo la lucha contra aquello que ya está
+								ocurriendo puede añadir sufrimiento al malestar inicial.</p>
+							</div>
 						</article>
+
 						<article>
-							<header><h3>Semana 5</h3><p>Emociones difíciles: aprender a sostener</p></header>
-							<div class="content"><p>Exploramos qué hacemos cuando aparece algo que no queremos sentir. Trabajamos el rechazo, la evitación y la aceptación, aprendiendo poco a poco a permanecer con una experiencia difícil <em>sin añadir más lucha al malestar que ya existe.</em></p></div>
+							<header><h3>Semana 5</h3><p>Dejemos que las cosas sean como son</p></header>
+							<div class="content">
+								<p>Profundizamos en la aceptación. No como resignación ni conformismo,
+								sino como la capacidad de reconocer la realidad del momento sin añadir
+								una lucha constante contra ella y, desde ahí, poder responder de una
+								manera más consciente.</p>
+							</div>
 						</article>
+
 						<article>
-							<header><h3>Semana 6</h3><p>Regulación emocional: aprender a acompañarnos</p></header>
-							<div class="content"><p>Damos un paso más: además de poder estar con lo que sentimos, aprendemos a acompañarnos cuando la experiencia se vuelve difícil. Utilizamos la atención, la respiración y el cuerpo para ayudarnos <em>sin intentar controlar ni hacer desaparecer la emoción.</em></p></div>
+							<header><h3>Semana 6</h3><p>Consideramos los pensamientos como pensamientos</p></header>
+							<div class="content">
+								<p>Aprendemos a observar nuestra actividad mental con mayor
+								perspectiva. Empezamos a reconocer que los pensamientos son
+								acontecimientos mentales y no necesariamente hechos, y practicamos la
+								posibilidad de no quedar automáticamente atrapados en lo que la mente
+								nos cuenta.</p>
+							</div>
 						</article>
+
 						<article>
-							<header><h3>Semana 7</h3><p>Autocompasión y voz interna</p></header>
-							<div class="content"><p>Observamos cómo nos hablamos cuando sufrimos, nos equivocamos o las cosas no salen como esperábamos. Trabajamos la autocompasión y cultivamos una forma más amable y cuidadosa de relacionarnos con nosotros mismos.</p></div>
+							<header><h3>Semana 7</h3><p>Compasión y autocompasión</p></header>
+							<div class="content">
+								<p>Exploramos la manera en que nos tratamos cuando sufrimos, nos
+								equivocamos o las cosas no salen como esperábamos. Introducimos la
+								compasión y la autocompasión y cultivamos una relación más amable con
+								nuestra propia experiencia.</p>
+							</div>
 						</article>
+
 						<article>
 							<header><h3>Semana 8</h3><p>Integración y continuidad</p></header>
-							<div class="content"><p>Integramos todo lo aprendido y observamos qué ha cambiado durante estas ocho semanas. Identificamos qué prácticas nos ayudan y diseñamos una forma realista de continuar incorporando mindfulness a nuestra vida.</p></div>
+							<div class="content">
+								<p>Integramos lo trabajado durante las ocho semanas, revisamos el
+								recorrido realizado y buscamos una forma realista de continuar
+								incorporando la práctica a nuestra vida cotidiana.</p>
+							</div>
 						</article>
+
 					</div>
-					<p class="align-center"><em>El recorrido completo tiene una lógica: darse cuenta → volver al cuerpo → estar presente → observar la mente → sostener → acompañarse → tratarse con amabilidad → integrar.</em></p>
 				</div>
 			</section>
 
+			<!-- ============ LA 59ª EDICIÓN: DETALLES Y PRECIO ============ -->
 			<section class="wrapper style1 align-center">
 				<div class="inner medium">
-					<header><h2>La 59ª edición</h2></header>
+					<header>
+						<h2>La 59ª edición</h2>
+					</header>
 					<ul class="alt">
 						<li><strong>Fechas:</strong> del 11 de septiembre al 31 de octubre de 2026, los viernes de 19:00 a 20:30 (8 sesiones).</li>
 						<li><strong>Formato:</strong> presencial en Málaga (Calle Hilera 15, entreplanta, of. 5) y también en directo por videollamada. Y si no puedes conectarte, tendrás acceso a la grabación de cada sesión.</li>
 						<li><strong>Plazas:</strong> grupo reducido, máximo 20 personas.</li>
-						<li><strong>Dirigido a:</strong> cualquier persona que viva con el piloto automático puesto y quiera aprender a relacionarse de otra manera con el estrés, los pensamientos y la ansiedad. No requiere experiencia previa.</li>
+						<li><strong>Dirigido a:</strong> cualquier persona que viva con el piloto
+						automático puesto y quiera aprender a relacionarse de otra manera con el
+						estrés, los pensamientos y la ansiedad. No requiere experiencia previa.</li>
 						<li><strong>Incluye:</strong> 8 sesiones, contenido teórico basado en psicología clínica, práctica de meditación en grupo y las grabaciones.</li>
 						<li><strong>Precio:</strong> 200 € · reserva de plaza con 50 € (transferencia o Bizum).</li>
 					</ul>
-					<p class="nota-precio">Esta es la última edición a 200 €: las próximas, a partir de 2027, tendrán otro precio. Te lo cuento solo para que decidas con la información completa, sin prisa.</p>
+					<p class="nota-precio">Esta es la última edición a 200 €: las próximas, a
+					partir de 2027, tendrán otro precio. Te lo cuento solo para que decidas con
+					la información completa, sin prisa.</p>
 					<ul class="actions">
 						<li><a href="#reserva" class="button primary">Reservar mi plaza</a></li>
 					</ul>
 				</div>
 			</section>
 
+			<!-- ============ RESERVA / CONTACTO ============ -->
 			<section id="reserva" class="wrapper style1 align-center">
 				<div class="inner medium">
 					<header>
 						<h2>Escríbeme y reserva tu plaza</h2>
-						<p>El curso se organiza en grupos reducidos para poder acompañarte de cerca. Déjame tus datos y te escribo con todos los detalles de esta edición. Sin compromiso.</p>
+						<p>El curso se organiza en grupos reducidos para poder acompañarte de
+						cerca. Déjame tus datos y te escribo con todos los detalles de esta
+						edición. Sin compromiso.</p>
 					</header>
 					<form method="post" action="#">
 						<div class="fields">
-							<div class="field half"><label for="name">Nombre</label><input type="text" name="name" id="name" placeholder="Tu nombre" /></div>
-							<div class="field half"><label for="email">Email</label><input type="email" name="email" id="email" placeholder="tu@correo.com" /></div>
-							<div class="field"><label for="message">Mensaje (opcional)</label><textarea name="message" id="message" placeholder="Si quieres, cuéntame qué te ha traído hasta aquí…" rows="4"></textarea></div>
+							<div class="field half">
+								<label for="name">Nombre</label>
+								<input type="text" name="name" id="name" placeholder="Tu nombre" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" placeholder="tu@correo.com" />
+							</div>
+							<div class="field">
+								<label for="message">Mensaje (opcional)</label>
+								<textarea name="message" id="message" placeholder="Si quieres, cuéntame qué te ha traído hasta aquí…" rows="4"></textarea>
+							</div>
 						</div>
-						<ul class="actions"><li><input type="submit" value="Quiero reservar mi plaza" class="primary" /></li></ul>
+						<ul class="actions">
+							<li><input type="submit" value="Quiero reservar mi plaza" class="primary" /></li>
+						</ul>
 					</form>
 				</div>
 			</section>
 
+			<!-- ============ PIE ============ -->
 			<footer class="wrapper style1 align-center">
 				<div class="inner">
 					<span class="brand-logo" role="img" aria-label="Mabel Laguna"></span>
-					<p>© Mabel Laguna · Psicóloga General Sanitaria (Nº AO09300) · Málaga. Todos los derechos reservados.</p>
+					<p>© Mabel Laguna · Psicóloga General Sanitaria (Nº AO09300) · Málaga.
+					Todos los derechos reservados.</p>
 				</div>
 			</footer>
 
 		</div>
 
+		<!-- Scripts de la plantilla Story (sin cambios) -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
