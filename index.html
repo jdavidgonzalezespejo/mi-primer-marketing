@@ -110,6 +110,21 @@
 			padding:1rem 1.25rem; font-style:italic;
 		}
 
+		/* Reseñas / testimonios */
+		.resenas-badge{ font-size:1.15rem; color:var(--ink); margin-top:-0.5rem; }
+		.resenas-badge .stars{ color:#E8A33D; letter-spacing:2px; }
+		.testimonios{
+			display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center;
+			margin-top:1.5rem; text-align:left;
+		}
+		.testi{
+			background:var(--tint); border:1px solid var(--line); border-radius:0.6rem;
+			padding:1.5rem 1.75rem; flex:1 1 17rem; max-width:21rem;
+		}
+		.testi .stars{ color:#E8A33D; letter-spacing:2px; margin:0 0 0.6rem 0; font-size:0.95rem; }
+		.testi p{ font-style:italic; color:var(--ink); margin:0 0 1rem 0; }
+		.testi footer{ color:var(--teal); font-weight:600; font-size:0.9rem; }
+
 		/* Respeta la preferencia de menos movimiento (accesibilidad) */
 		@media (prefers-reduced-motion: reduce){
 			*, *::before, *::after{ animation:none !important; transition:none !important; }
@@ -173,6 +188,45 @@
 					sin ser arrastrada por ello, y elegir cómo responder. El curso se apoya en
 					enfoques con respaldo científico —MBCT y MBSR—, con un efecto moderado
 					sobre el estrés, la ansiedad y la calidad de vida.</p>
+				</div>
+			</section>
+
+			<!-- ============ OPINIONES / RESEÑAS ============ -->
+			<section id="opiniones" class="wrapper style1 align-center">
+				<div class="inner">
+					<header>
+						<h2>Lo que cuentan quienes ya lo han hecho</h2>
+						<p class="resenas-badge"><span class="stars">★★★★★</span> 5,0 · más de 115 reseñas en Google</p>
+					</header>
+					<div class="testimonios">
+						<div class="testi">
+							<p class="stars">★★★★★</p>
+							<p>«En tiempos donde el vértigo está a la orden del día, Mabel me ha
+							mostrado lo importante que es incorporar pausas con meditación
+							intencional para aceptarnos, entendernos, aprender a vivir mejor y
+							crecer como personas. Recomiendo mucho su curso intensivo de
+							Mindfulness, especialmente para aquellos que, como yo antes de hacerlo,
+							piensan que les aportará poco… y comprueben lo equivocados que están.»</p>
+							<footer>Lucas L. · reseña de Google</footer>
+						</div>
+						<div class="testi">
+							<p class="stars">★★★★★</p>
+							<p>«He realizado el curso intensivo de 8 semanas con Mabel y estoy
+							encantada, ha sido una experiencia muy enriquecedora y transformadora
+							para mí. Mabel crea un ambiente muy cercano y nos enseñó herramientas
+							para poder gestionar bien el estrés y conectar con uno mismo. Siempre
+							le estaré agradecida.»</p>
+							<footer>Gabriela M. · reseña de Google</footer>
+						</div>
+						<div class="testi">
+							<p class="stars">★★★★★</p>
+							<p>«Han sido 8 semanas estupendas, me han servido para sentirme mejor
+							día a día; el autocontrol y la aceptación a través de la respiración
+							han sido para mí un gran descubrimiento. Recomiendo 100% realizar este
+							curso con Mabel Laguna, excelente persona y gran profesional.»</p>
+							<footer>Patricia C. · reseña de Google</footer>
+						</div>
+					</div>
 				</div>
 			</section>
 
