@@ -2,287 +2,107 @@
 @import url("https://googleapis.com");
 
 /*
-	Story by HTML5 UP | Personalizado para Mabel Laguna (Curso Intensivo Mindfulness)
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;}
-
-body {
-	line-height: 1;
-}
-
-ol, ul {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-body {
-	-webkit-text-size-adjust: none;
-}
-
-mark {
-	background-color: transparent;
-	color: inherit;
-}
-
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input, select, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-}
-
-/* Basic */
-@-ms-viewport {
-	width: device-width;
-}
-
-body {
-	-ms-overflow-style: scrollbar;
-}
-
-@media screen and (max-width: 480px) {
-	html, body {
-		min-width: 320px;
-	}
-}
-
-html {
-	box-sizing: border-box;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
-body {
-	background: #ffffff;
-}
-
-/* Type */
-html {
-	font-size: 18pt;
-}
-
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+body { -webkit-text-size-adjust: none; }
+mark { background-color: transparent; color: inherit; }
+input::-moz-focus-inner { border: 0; padding: 0; }
+input, select, textarea { -moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; }
+@-ms-viewport { width: device-width; }
+body { -ms-overflow-style: scrollbar; }
+@media screen and (max-width: 480px) { html, body { min-width: 320px; } }
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+body { background: #ffffff; }
+body.is-preload *, body.is-preload *:before, body.is-preload *:after { -moz-animation: none !important; -webkit-animation: none !important; -ms-animation: none !important; animation: none !important; -moz-transition: none !important; -webkit-transition: none !important; -ms-transition: none !important; transition: none !important; }
+html { font-size: 18pt; }
 @media screen and (max-width: 1680px) { html { font-size: 14pt; } }
 @media screen and (max-width: 1280px) { html { font-size: 12pt; } }
 @media screen and (max-width: 736px) { html { font-size: 11pt; } }
 @media screen and (max-width: 360px) { html { font-size: 10pt; } }
+body { background-color: #ffffff; color: #444444; }
+body, input, select, textarea { font-family: "Nunito", Helvetica, sans-serif; font-size: 1rem; font-weight: 300; line-height: 1.65; }
+a { -moz-transition: color 0.2s ease-in-out; -webkit-transition: color 0.2s ease-in-out; -ms-transition: color 0.2s ease-in-out; transition: color 0.2s ease-in-out; text-decoration: underline; color: #429b9e; }
+a:hover { text-decoration: none; color: #2f6f71; }
+strong, b { font-weight: 600; color: #111111; }
+em, i { font-style: italic; }
+p { margin: 0 0 2rem 0; }
+p.major { font-size: 1.25rem; }
+h1, h2, h3, h4, h5, h6 { font-weight: 300; line-height: 1.375; letter-spacing: -0.02em; margin: 0 0 1rem 0; color: #429b9e; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; text-decoration: none; }
+h1 { font-size: 3.5rem; line-height: 1.2; font-weight: 600; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.1rem; }
+h5 { font-size: 0.9rem; }
+h6 { font-size: 0.7rem; }
+sub { font-size: 0.8rem; position: relative; top: 0.5rem; }
+sup { font-size: 0.8rem; position: relative; top: -0.5rem; }
+blockquote { border-left: solid 4px; font-style: italic; margin: 0 0 2rem 0; padding: 0.5rem 0 0.5rem 2rem; border-left-color: rgba(0, 0, 0, 0.2); }
+code { border-radius: 4px; font-family: "Courier New", monospace; font-size: 0.9em; margin: 0 0.25rem; padding: 0.25rem 0.325rem; background: rgba(0, 0, 0, 0.05); border-color: rgba(0, 0, 0, 0.2); }
+pre { -webkit-overflow-scrolling: touch; font-family: "Courier New", monospace; font-size: 0.9em; margin: 0 0 2rem 0; }
+pre code { display: block; line-height: 1.5; padding: 0.75rem 1rem; overflow-x: auto; }
+hr { border: 0; border-bottom: solid 1px; margin: 2.5rem 0; border-bottom-color: rgba(0, 0, 0, 0.2); }
+hr.major { margin: 3.5rem 0; }
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+@media screen and (max-width: 736px) { p.major { font-size: 1.1rem; } h1 { font-size: 2.5rem; } h2 { font-size: 2rem; } h3 { font-size: 1.25rem; } h4 { font-size: 1rem; } }
+input, select, textarea { color: #000000; }
+.row { display: flex; flex-wrap: wrap; box-sizing: border-box; align-items: stretch; margin-top: 0; margin-left: -2rem; }
+.row > * { box-sizing: border-box; padding: 0 0 0 2rem; }
+.row.gtr-uniform { margin-top: -2rem; }
+.row.gtr-uniform > * { padding-top: 2rem; }
 
-body {
-	background-color: #ffffff;
-	color: #333333;
-}
+/* Inyección de Estilos Turquesa Zen y Estructura Original */
+.button { background-color: #429b9e !important; box-shadow: none !important; color: #ffffff !important; border-radius: 30px !important; font-family: "Nunito", sans-serif; font-weight: 600; text-decoration: none; }
+.button:hover { background-color: #2f6f71 !important; color: #ffffff !important; }
+.button.primary { background-color: #429b9e !important; color: #ffffff !important; }
+.button.primary:hover { background-color: #2f6f71 !important; }
 
-body, input, select, textarea {
-	font-family: "Nunito", Helvetica, sans-serif;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.7;
-}
+/* Clases estructurales de la plantilla Story (Mantenidas intactas para evitar desorganización) */
+.wrapper { padding: 4rem 0; position: relative; }
+.inner { margin: 0 auto; width: 65rem; max-width: calc(100% - 6rem); }
+@media screen and (max-width: 1280px) { .inner { width: 100%; max-width: calc(100% - 4rem); } }
+@media screen and (max-width: 736px) { .wrapper { padding: 3rem 0; } .inner { max-width: calc(100% - 2.5rem); } }
 
-a {
-	-moz-transition: color 0.2s ease-in-out;
-	-webkit-transition: color 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out;
-	transition: color 0.2s ease-in-out;
-	text-decoration: underline;
-	color: #429b9e;
-}
+/* Grid de semanas */
+.gallery { display: flex; flex-wrap: wrap; width: 100%; margin: 2rem 0; }
+.gallery article { width: 50%; position: relative; overflow: hidden; }
+@media screen and (max-width: 736px) { .gallery article { width: 100%; } }
+.gallery article .image { display: block; width: 100%; }
+.gallery article .image img { display: block; width: 100%; height: 20rem; object-fit: cover; }
+.gallery article .caption { padding: 2rem; background: #ffffff; text-align: left; }
+.gallery article .caption h3 { color: #429b9e; font-weight: 600; margin-bottom: 0.5rem; }
 
-a:hover {
-	text-decoration: none;
-	color: #2f6f71;
+/* Banner principal y spotlights estructurados */
+.banner, .spotlight { display: flex; align-items: center; min-height: 100vh; background-color: #ffffff; }
+.banner .content, .spotlight .content { padding: 4rem; width: 50%; }
+.banner .image, .spotlight .image { width: 50%; height: 100vh; overflow: hidden; }
+.banner .image img, .spotlight .image img { width: 100%; height: 100%; object-fit: cover; }
+@media screen and (max-width: 980px) { 
+	.banner, .spotlight { flex-direction: column; min-height: auto; }
+	.banner .content, .spotlight .content { width: 100%; padding: 3rem 2rem; }
+	.banner .image, .spotlight .image { width: 100%; height: 25rem; }
 }
+.orient-left { flex-direction: row; }
+.orient-right { flex-direction: row-reverse; }
 
-strong, b {
-	font-weight: 700;
-	color: #111111;
-}
-
-p {
-	margin: 0 0 2rem 0;
-	color: #555555;
-}
-
-p.major {
-	font-size: 1.25rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 600;
-	line-height: 1.4;
-	letter-spacing: -0.02em;
-	margin: 0 0 1rem 0;
-	color: #429b9e;
-}
-
-h1 {
-	font-size: 3rem;
-	font-weight: 700;
-}
-
-h2 {
-	font-size: 2.25rem;
-}
-
-h3 {
-	font-size: 1.5rem;
-}
-
-/* Botones con estilo Turquesa Zen */
-.button {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	background-color: #429b9e !important;
-	border-radius: 30px !important;
-	border: 0;
-	color: #ffffff !important;
-	cursor: pointer;
-	display: inline-block;
-	font-weight: 600;
-	height: 3.5rem;
-	line-height: 3.5rem;
-	padding: 0 2.5rem;
-	text-align: center;
-	text-decoration: none;
-	white-space: nowrap;
-}
-
-.button:hover {
-	background-color: #2f6f71 !important;
-	color: #ffffff !important;
-}
-
-.button.primary {
-	background-color: #429b9e !important;
-	color: #ffffff !important;
-}
-
-.button.primary:hover {
-	background-color: #2f6f71 !important;
-}
-
-/* Fondos y Estructuras */
-.wrapper.style1 {
-	background-color: #f4f6f6; /* Gris Arena Suave */
-}
-
-.banner.style1 {
-	background-color: #ffffff;
-}
-
-.spotlight.style1 {
-	background-color: #ffffff;
-}
-
-/* Formularios */
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-	background: #ffffff;
-	border: solid 1px #e5e5e5;
-	border-radius: 6px;
-	color: #333333;
-	display: block;
-	outline: 0;
-	padding: 0 1rem;
-	text-decoration: none;
-	width: 100%;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-select:focus,
-textarea:focus {
-	border-color: #429b9e;
-	box-shadow: 0 0 0 1px #429b9e;
-}
-
-input[type="text"],
-input[type="email"],
-select {
-	height: 3rem;
-}
-
-textarea {
-	padding: 0.75rem 1rem;
-}
-
-label {
-	color: #429b9e;
-	display: block;
-	font-size: 0.9rem;
-	font-weight: 600;
-	margin: 0 0 0.5rem 0;
-}
-
-/* Secciones de las semanas (Grillas) */
-.gallery article .caption {
-	background-color: rgba(255, 255, 255, 0.95) !important;
-	color: #333333 !important;
-}
-
-.gallery article .caption h3 {
-	color: #429b9e !important;
-}
-
-/* Footer */
-footer p {
-	color: #999999;
-	font-size: 0.9rem;
-}
-
-/* Diseño Adaptativo básico */
-.divided > section {
-	border-bottom: solid 1px #e5e5e5;
-}
+/* Formulario limpio */
+form .fields { display: flex; flex-wrap: wrap; margin: 0 0 2rem -1rem; }
+form .field { padding: 1rem 0 0 1rem; width: 100%; }
+form .field.half { width: 50%; }
+@media screen and (max-width: 480px) { form .field.half { width: 100%; } }
+input[type="text"], input[type="email"], textarea { background: #ffffff; border: solid 1px #e5e5e5; border-radius: 6px; padding: 0.75rem 1rem; width: 100%; font-family: "Nunito", sans-serif; }
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus { border-color: #429b9e; }
+label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #429b9e; text-align: left; }
