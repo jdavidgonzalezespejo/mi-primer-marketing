@@ -7,6 +7,41 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* ==========================================================================
+   CAMBIOS DE IDENTIDAD CORPORATIVA (MABEL LAGUNA)
+   ========================================================================== */
+body, input, select, textarea { font-family: "Nunito", Helvetica, sans-serif !important; }
+h1, h2, h3, h4, h5, h6 { color: #429b9e !important; }
+a { color: #429b9e !important; }
+a:hover { color: #2f6f71 !important; }
+
+/* Botones */
+input[type="submit"], input[type="reset"], input[type="button"], .button {
+	background-color: #429b9e !important;
+	color: #ffffff !important;
+	box-shadow: none !important;
+}
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:hover {
+	background-color: #2f6f71 !important;
+	color: #ffffff !important;
+}
+input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary, .button.primary {
+	background-color: #429b9e !important;
+	color: #ffffff !important;
+}
+input[type="submit"].primary:hover, input[type="reset"].primary:hover, input[type="button"].primary:hover, .button.primary:hover {
+	background-color: #2f6f71 !important;
+}
+
+/* Enfoque de formulario */
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+	border-color: #429b9e !important;
+	box-shadow: 0 0 0 1px #429b9e !important;
+}
+
+/* ==========================================================================
+   CÓDIGO ESTRUCTURAL ORIGINAL (MANTENIDO AL 100%)
+   ========================================================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 body { line-height: 1; }
@@ -30,17 +65,15 @@ html { font-size: 18pt; }
 @media screen and (max-width: 1280px) { html { font-size: 12pt; } }
 @media screen and (max-width: 736px) { html { font-size: 11pt; } }
 @media screen and (max-width: 360px) { html { font-size: 10pt; } }
-body { background-color: #ffffff; color: #444444; }
-body, input, select, textarea { font-family: "Nunito", Helvetica, sans-serif; font-size: 1rem; font-weight: 300; line-height: 1.65; }
-a { -moz-transition: color 0.2s ease-in-out; -webkit-transition: color 0.2s ease-in-out; -ms-transition: color 0.2s ease-in-out; transition: color 0.2s ease-in-out; text-decoration: underline; color: #429b9e; }
-a:hover { text-decoration: none; color: #2f6f71; }
-strong, b { font-weight: 600; color: #111111; }
+body { background-color: #ffffff; color: #000000; }
+body, input, select, textarea { font-size: 1rem; font-weight: 300; line-height: 1.65; }
+strong, b { font-weight: 400; color: #000000; }
 em, i { font-style: italic; }
 p { margin: 0 0 2rem 0; }
 p.major { font-size: 1.25rem; }
-h1, h2, h3, h4, h5, h6 { font-weight: 300; line-height: 1.375; letter-spacing: -0.02em; margin: 0 0 1rem 0; color: #429b9e; }
+h1, h2, h3, h4, h5, h6 { font-weight: 300; line-height: 1.375; letter-spacing: -0.05em; margin: 0 0 1rem 0; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; text-decoration: none; }
-h1 { font-size: 3.5rem; line-height: 1.2; font-weight: 600; }
+h1 { font-size: 3.5rem; line-height: 1.2; }
 h2 { font-size: 2.25rem; }
 h3 { font-size: 1.5rem; }
 h4 { font-size: 1.1rem; }
@@ -63,46 +96,56 @@ input, select, textarea { color: #000000; }
 .row > * { box-sizing: border-box; padding: 0 0 0 2rem; }
 .row.gtr-uniform { margin-top: -2rem; }
 .row.gtr-uniform > * { padding-top: 2rem; }
-
-/* Inyección de Estilos Turquesa Zen y Estructura Original */
-.button { background-color: #429b9e !important; box-shadow: none !important; color: #ffffff !important; border-radius: 30px !important; font-family: "Nunito", sans-serif; font-weight: 600; text-decoration: none; }
-.button:hover { background-color: #2f6f71 !important; color: #ffffff !important; }
-.button.primary { background-color: #429b9e !important; color: #ffffff !important; }
-.button.primary:hover { background-color: #2f6f71 !important; }
-
-/* Clases estructurales de la plantilla Story (Mantenidas intactas para evitar desorganización) */
-.wrapper { padding: 4rem 0; position: relative; }
-.inner { margin: 0 auto; width: 65rem; max-width: calc(100% - 6rem); }
-@media screen and (max-width: 1280px) { .inner { width: 100%; max-width: calc(100% - 4rem); } }
-@media screen and (max-width: 736px) { .wrapper { padding: 3rem 0; } .inner { max-width: calc(100% - 2.5rem); } }
-
-/* Grid de semanas */
-.gallery { display: flex; flex-wrap: wrap; width: 100%; margin: 2rem 0; }
-.gallery article { width: 50%; position: relative; overflow: hidden; }
-@media screen and (max-width: 736px) { .gallery article { width: 100%; } }
-.gallery article .image { display: block; width: 100%; }
-.gallery article .image img { display: block; width: 100%; height: 20rem; object-fit: cover; }
-.gallery article .caption { padding: 2rem; background: #ffffff; text-align: left; }
-.gallery article .caption h3 { color: #429b9e; font-weight: 600; margin-bottom: 0.5rem; }
-
-/* Banner principal y spotlights estructurados */
-.banner, .spotlight { display: flex; align-items: center; min-height: 100vh; background-color: #ffffff; }
-.banner .content, .spotlight .content { padding: 4rem; width: 50%; }
-.banner .image, .spotlight .image { width: 50%; height: 100vh; overflow: hidden; }
-.banner .image img, .spotlight .image img { width: 100%; height: 100%; object-fit: cover; }
-@media screen and (max-width: 980px) { 
-	.banner, .spotlight { flex-direction: column; min-height: auto; }
-	.banner .content, .spotlight .content { width: 100%; padding: 3rem 2rem; }
-	.banner .image, .spotlight .image { width: 100%; height: 25rem; }
-}
-.orient-left { flex-direction: row; }
-.orient-right { flex-direction: row-reverse; }
-
-/* Formulario limpio */
-form .fields { display: flex; flex-wrap: wrap; margin: 0 0 2rem -1rem; }
-form .field { padding: 1rem 0 0 1rem; width: 100%; }
-form .field.half { width: 50%; }
-@media screen and (max-width: 480px) { form .field.half { width: 100%; } }
-input[type="text"], input[type="email"], textarea { background: #ffffff; border: solid 1px #e5e5e5; border-radius: 6px; padding: 0.75rem 1rem; width: 100%; font-family: "Nunito", sans-serif; }
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus { border-color: #429b9e; }
-label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #429b9e; text-align: left; }
+.row.aln-left { justify-content: flex-start; }
+.row.aln-center { justify-content: center; }
+.row.aln-right { justify-content: flex-end; }
+.row.aln-top { align-items: flex-start; }
+.row.aln-middle { align-items: center; }
+.row.aln-bottom { align-items: flex-end; }
+.row > .imp { order: -1; }
+.row > .col-1 { width: 8.33333%; }
+.row > .off-1 { margin-left: 8.33333%; }
+.row > .col-2 { width: 16.66667%; }
+.row > .off-2 { margin-left: 16.66667%; }
+.row > .col-3 { width: 25%; }
+.row > .off-3 { margin-left: 25%; }
+.row > .col-4 { width: 33.33333%; }
+.row > .off-4 { margin-left: 33.33333%; }
+.row > .col-5 { width: 41.66667%; }
+.row > .off-5 { margin-left: 41.66667%; }
+.row > .col-6 { width: 50%; }
+.row > .off-6 { margin-left: 50%; }
+.row > .col-7 { width: 58.33333%; }
+.row > .off-7 { margin-left: 58.33333%; }
+.row > .col-8 { width: 66.66667%; }
+.row > .off-8 { margin-left: 66.66667%; }
+.row > .col-9 { width: 75%; }
+.row > .off-9 { margin-left: 75%; }
+.row > .col-10 { width: 83.33333%; }
+.row > .off-10 { margin-left: 83.33333%; }
+.row > .col-11 { width: 91.66667%; }
+.row > .off-11 { margin-left: 91.66667%; }
+.row > .col-12 { width: 100%; }
+.row > .off-12 { margin-left: 100%; }
+.row.gtr-0 { margin-top: 0; margin-left: 0rem; }
+.row.gtr-0 > * { padding: 0 0 0 0rem; }
+.row.gtr-0.gtr-uniform { margin-top: 0rem; }
+.row.gtr-0.gtr-uniform > * { padding-top: 0rem; }
+.row.gtr-25 { margin-top: 0; margin-left: -0.5rem; }
+.row.gtr-25 > * { padding: 0 0 0 0.5rem; }
+.row.gtr-25.gtr-uniform { margin-top: -0.5rem; }
+.row.gtr-25.gtr-uniform > * { padding-top: 0.5rem; }
+.row.gtr-50 { margin-top: 0; margin-left: -1rem; }
+.row.gtr-50 > * { padding: 0 0 0 1rem; }
+.row.gtr-50.gtr-uniform { margin-top: -1rem; }
+.row.gtr-50.gtr-uniform > * { padding-top: 1rem; }
+.row.gtr-150 { margin-top: 0; margin-left: -3rem; }
+.row.gtr-150 > * { padding: 0 0 0 3rem; }
+.row.gtr-150.gtr-uniform { margin-top: -3rem; }
+.row.gtr-150.gtr-uniform > * { padding-top: 3rem; }
+.row.gtr-200 { margin-top: 0; margin-left: -4rem; }
+.row.gtr-200 > * { padding: 0 0 0 4rem; }
+.row.gtr-200.gtr-uniform { margin-top: -4rem; }
+.row.gtr-200.gtr-uniform > * { padding-top: 4rem; }
+@media screen and (max-width: 1680px) { .row { margin-left: -2rem; } .row > * { padding-left: 2rem; } .row.gtr-uniform { margin-top: -2rem; } .row.gtr-uniform > * { padding-top: 2rem; } .row.gtr-25 { margin-left: -0.5rem; } .row.gtr-25 > * { padding-left: 0.5rem; } .row.gtr-25.gtr-uniform { margin-top: -0.5rem; } .row.gtr-25.gtr-uniform > * { padding-top: 0.5rem; } .row.gtr-50 { margin-left: -1rem; } .row.gtr-50 > * { padding-left: 1rem; } .row.gtr-50.gtr-uniform { margin-top: -1rem; } .row.gtr-50.gtr-uniform > * { padding-top: 1rem; } .row.gtr-150 { margin-left: -3rem; } .row.gtr-150 > * { padding-left: 3rem; } .row.gtr-150.gtr-uniform { margin-top: -3rem; } .row.gtr-150.gtr-uniform > * { padding-top: 3rem; } .row.gtr-200 { margin-left: -4rem; } .row.gtr-200 > * { padding-left: 4rem; } .row.gtr-200.gtr-uniform { margin-top: -4rem; } .row.gtr-200.gtr-uniform > * { padding-top: 4rem; } }
+@media screen and (max-width: 1280px) { .row { margin-left: -1.5rem; } .row > * { padding-left: 1.5rem; } .row.gtr-uniform { margin-top: -1.5rem; } .row.gtr-uniform > * { padding-top: 1.5rem; } .row.gtr-25 { margin-left: -0.375rem; } .row.gtr-25 > * { padding-left: 0.375rem; } .row.gtr-25.gtr-uniform { margin-top: -0.375rem; } .row.gtr-25.gtr-uniform > * { padding-top: 0.375rem; } .row.gtr-50 { margin-left: -0.75rem; } .row.gtr-50 > * { padding-left: 0.75rem; } .row.gtr-50.gtr-uniform { margin-top: -0.75rem; } .row.gtr-50.gtr-uniform > * { padding-top: 0.75rem; } .row.gtr-150 { margin-left: -2.25rem; } .row.gtr-150 > * { padding-left: 2.25rem; } .row.gtr-150.gtr-uniform { margin-top: -2.25rem; } .row.gtr-150.gtr-uniform > * { padding-top: 2.25rem; } .row.gtr-200 { margin-left: -3rem; } .row.gtr-200 > * { padding-left: 3rem; } .row.gtr-200.gtr-uniform { margin-top: -3rem; } .row.gtr-200.gtr-uniform > * { padding-top: 3rem; } }
